@@ -1,0 +1,528 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4013A2A3-60DD-4F01-8B1C-096B7168AA25}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vision_motion</RootNamespace>
+    <AssemblyName>Vision_motion</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BeevisionSolution">
+      <HintPath>..\..\..\Vision\BeevisionSolution.dll</HintPath>
+    </Reference>
+    <Reference Include="BitMiracle.LibTiff.NET">
+      <HintPath>C:\Users\OPT\Desktop\App\PC_Control_SEV2\packages\BitMiracle.LibTiff.NET.2.4.649\lib\net40\BitMiracle.LibTiff.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v22.2" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2" />
+    <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.Utils.v22.2" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.2" />
+    <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="HarfBuzzSharp">
+      <HintPath>C:\Users\OPT\Desktop\App\PC_Control_SEV2\packages\HarfBuzzSharp.8.3.1.2\lib\net462\HarfBuzzSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Users\OPT\Desktop\App\PC_Control_SEV2\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\InterfaceVision_Motion.cs" />
+    <Compile Include="MOTION\controldevice\DeviceLed\Comdevice.cs" />
+    <Compile Include="MOTION\Log\LogProgram.cs" />
+    <Compile Include="MOTION\motion_card\ControlCycleRun\frmProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MOTION\motion_card\ControlCycleRun\frmProcess.Designer.cs">
+      <DependentUpon>frmProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOTION\motion_card\ControlCycleRun\Processing_Auto.cs" />
+    <Compile Include="MOTION\motion_card\ControlCycleRun\ucRunProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MOTION\motion_card\ControlCycleRun\ucRunProcess.Designer.cs">
+      <DependentUpon>ucRunProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOTION\motion_card\ControlCycleRun\ucWaitProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MOTION\motion_card\ControlCycleRun\ucWaitProcess.Designer.cs">
+      <DependentUpon>ucWaitProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOTION\motion_card\ControlCycleRun\ucWriteProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MOTION\motion_card\ControlCycleRun\ucWriteProcess.Designer.cs">
+      <DependentUpon>ucWriteProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOTION\motion_card\ImcApi.cs" />
+    <Compile Include="MOTION\motion_card\Setting_Control.cs" />
+    <Compile Include="MOTION\motion_manager\Alarm\frmAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MOTION\motion_manager\Alarm\frmAlarm.Designer.cs">
+      <DependentUpon>frmAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOTION\motion_manager\Control_Servo.cs" />
+    <Compile Include="MOTION\motion_manager\converter_property\Initial_coverter_property.cs" />
+    <Compile Include="MOTION\motion_manager\Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MOTION\motion_manager\Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOTION\motion_manager\manager_path\Manager_path.cs" />
+    <Compile Include="MOTION\motion_manager\model\config_data_model\Data_cofig.cs" />
+    <Compile Include="MOTION\motion_manager\model\config_data_model\Data_motion.cs" />
+    <Compile Include="MOTION\motion_manager\model\config_data_model\Data_Router&amp;Led.cs" />
+    <Compile Include="MOTION\motion_manager\model\Model.cs" />
+    <Compile Include="MOTION\motion_manager\mode\Mode_Status.cs" />
+    <Compile Include="MOTION\motion_manager\thread\Datetime_now.cs" />
+    <Compile Include="MOTION\ui\Main_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MOTION\ui\Main_control.Designer.cs">
+      <DependentUpon>Main_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="VISION\VISION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISION\VISION.Designer.cs">
+      <DependentUpon>VISION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISION\VISION1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISION\VISION1.Designer.cs">
+      <DependentUpon>VISION1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOTION\motion_card\ControlCycleRun\frmProcess.resx">
+      <DependentUpon>frmProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOTION\motion_card\ControlCycleRun\ucRunProcess.resx">
+      <DependentUpon>ucRunProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOTION\motion_card\ControlCycleRun\ucWaitProcess.resx">
+      <DependentUpon>ucWaitProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOTION\motion_card\ControlCycleRun\ucWriteProcess.resx">
+      <DependentUpon>ucWriteProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOTION\motion_manager\Alarm\frmAlarm.resx">
+      <DependentUpon>frmAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOTION\motion_manager\Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOTION\ui\Main_control.resx">
+      <DependentUpon>Main_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="VISION\VISION.resx">
+      <DependentUpon>VISION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISION\VISION1.resx">
+      <DependentUpon>VISION1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MOTION\icon\Button_Add.png" />
+    <Content Include="MOTION\icon\Button_Camera.png" />
+    <Content Include="MOTION\icon\Button_Camera_Live.png" />
+    <Content Include="MOTION\icon\Button_Delete.png" />
+    <Content Include="MOTION\icon\Button_display.png" />
+    <Content Include="MOTION\icon\Button_Down.png" />
+    <Content Include="MOTION\icon\Button_Dulicate.png" />
+    <Content Include="MOTION\icon\Button_Edit.png" />
+    <Content Include="MOTION\icon\Button_Ems.png" />
+    <Content Include="MOTION\icon\Button_Filmtrip.png" />
+    <Content Include="MOTION\icon\Button_Find.png" />
+    <Content Include="MOTION\icon\Button_Home.png" />
+    <Content Include="MOTION\icon\Button_HomeICO.ico" />
+    <Content Include="MOTION\icon\Button_LightOff.png" />
+    <Content Include="MOTION\icon\Button_LightOn.png" />
+    <Content Include="MOTION\icon\Button_Lock.png" />
+    <Content Include="MOTION\icon\Button_LogOut.png" />
+    <Content Include="MOTION\icon\Button_Menu_Camera.png" />
+    <Content Include="MOTION\icon\Button_Menu_Folder.png" />
+    <Content Include="MOTION\icon\Button_Minus.png" />
+    <Content Include="MOTION\icon\Button_Pause.png" />
+    <Content Include="MOTION\icon\Button_Pause_1.png" />
+    <Content Include="MOTION\icon\Button_Play.png" />
+    <Content Include="MOTION\icon\Button_Play1.png" />
+    <Content Include="MOTION\icon\Button_Play11.png" />
+    <Content Include="MOTION\icon\Button_Play_Red.png" />
+    <Content Include="MOTION\icon\Button_Record.png" />
+    <Content Include="MOTION\icon\Button_Reset.png" />
+    <Content Include="MOTION\icon\Button_Right.png" />
+    <Content Include="MOTION\icon\Button_Right1.png" />
+    <Content Include="MOTION\icon\Button_Rotate_Back.png" />
+    <Content Include="MOTION\icon\Button_Rotate_Forward.png" />
+    <Content Include="MOTION\icon\Button_Run.png" />
+    <Content Include="MOTION\icon\Button_Run_Back.png" />
+    <Content Include="MOTION\icon\Button_Run_First.png" />
+    <Content Include="MOTION\icon\Button_Run_Last.png" />
+    <Content Include="MOTION\icon\Button_Run_Loop.png" />
+    <Content Include="MOTION\icon\Button_Run_Loop_1.png" />
+    <Content Include="MOTION\icon\Button_Run_Man.png" />
+    <Content Include="MOTION\icon\Button_Run_Next.png" />
+    <Content Include="MOTION\icon\Button_Save.png" />
+    <Content Include="MOTION\icon\Button_Thumb.png" />
+    <Content Include="MOTION\icon\Button_Unlock.png" />
+    <Content Include="MOTION\icon\Button_Up.png" />
+    <Content Include="MOTION\icon\Button_ZoomFit.png" />
+    <Content Include="MOTION\icon\Button_ZoomLarge.png" />
+    <Content Include="MOTION\icon\Button_ZoomSmall.png" />
+    <Content Include="MOTION\icon\download.png" />
+    <Content Include="MOTION\icon\Form_Close.png" />
+    <Content Include="MOTION\icon\Form_Maximum.png" />
+    <Content Include="MOTION\icon\Form_Minimize.png" />
+    <Content Include="MOTION\icon\Form_Pin.png" />
+    <Content Include="MOTION\icon\Form_Pin_Free.png" />
+    <Content Include="MOTION\icon\ICO-Login.ico" />
+    <Content Include="MOTION\icon\ICO-Record.ico" />
+    <Content Include="MOTION\icon\ICO-Tool.ico" />
+    <Content Include="MOTION\icon\IcoEdit.ico" />
+    <Content Include="MOTION\icon\IcoLogin.ico" />
+    <Content Include="MOTION\icon\icons8-alarm-100.png" />
+    <Content Include="MOTION\icon\icons8-alarm-50.png" />
+    <Content Include="MOTION\icon\icons8-analytics-64.png" />
+    <Content Include="MOTION\icon\icons8-chart-60.png" />
+    <Content Include="MOTION\icon\icons8-dashboard-48.png" />
+    <Content Include="MOTION\icon\icons8-end-64.png" />
+    <Content Include="MOTION\icon\icons8-help.gif" />
+    <Content Include="MOTION\icon\icons8-loading.gif" />
+    <Content Include="MOTION\icon\icons8-lock.gif" />
+    <Content Include="MOTION\icon\icons8-log-48.png" />
+    <Content Include="MOTION\icon\icons8-member-48.png" />
+    <Content Include="MOTION\icon\icons8-printer-50.png" />
+    <Content Include="MOTION\icon\icons8-teaching-50.png" />
+    <Content Include="MOTION\icon\icons8-teaching-64.png" />
+    <Content Include="MOTION\icon\icons8-timer-100.png" />
+    <Content Include="MOTION\icon\icons\Button_Add.png" />
+    <Content Include="MOTION\icon\icons\Button_Camera.png" />
+    <Content Include="MOTION\icon\icons\Button_Camera_Live.png" />
+    <Content Include="MOTION\icon\icons\Button_Delete.png" />
+    <Content Include="MOTION\icon\icons\Button_display.png" />
+    <Content Include="MOTION\icon\icons\Button_Down.png" />
+    <Content Include="MOTION\icon\icons\Button_Dulicate.png" />
+    <Content Include="MOTION\icon\icons\Button_Edit.png" />
+    <Content Include="MOTION\icon\icons\Button_Ems.png" />
+    <Content Include="MOTION\icon\icons\Button_Filmtrip.png" />
+    <Content Include="MOTION\icon\icons\Button_Find.png" />
+    <Content Include="MOTION\icon\icons\Button_Home.png" />
+    <Content Include="MOTION\icon\icons\Button_HomeICO.ico" />
+    <Content Include="MOTION\icon\icons\Button_LightOff.png" />
+    <Content Include="MOTION\icon\icons\Button_LightOn.png" />
+    <Content Include="MOTION\icon\icons\Button_Lock.png" />
+    <Content Include="MOTION\icon\icons\Button_LogOut.png" />
+    <Content Include="MOTION\icon\icons\Button_Menu_Camera.png" />
+    <Content Include="MOTION\icon\icons\Button_Menu_Folder.png" />
+    <Content Include="MOTION\icon\icons\Button_Minus.png" />
+    <Content Include="MOTION\icon\icons\Button_Pause.png" />
+    <Content Include="MOTION\icon\icons\Button_Pause_1.png" />
+    <Content Include="MOTION\icon\icons\Button_Play.png" />
+    <Content Include="MOTION\icon\icons\Button_Play1.png" />
+    <Content Include="MOTION\icon\icons\Button_Play11.png" />
+    <Content Include="MOTION\icon\icons\Button_Play_Red.png" />
+    <Content Include="MOTION\icon\icons\Button_Record.png" />
+    <Content Include="MOTION\icon\icons\Button_Reset.png" />
+    <Content Include="MOTION\icon\icons\Button_Right.png" />
+    <Content Include="MOTION\icon\icons\Button_Right1.png" />
+    <Content Include="MOTION\icon\icons\Button_Rotate_Back.png" />
+    <Content Include="MOTION\icon\icons\Button_Rotate_Forward.png" />
+    <Content Include="MOTION\icon\icons\Button_Run.png" />
+    <Content Include="MOTION\icon\icons\Button_Run_Back.png" />
+    <Content Include="MOTION\icon\icons\Button_Run_First.png" />
+    <Content Include="MOTION\icon\icons\Button_Run_Last.png" />
+    <Content Include="MOTION\icon\icons\Button_Run_Loop.png" />
+    <Content Include="MOTION\icon\icons\Button_Run_Loop_1.png" />
+    <Content Include="MOTION\icon\icons\Button_Run_Man.png" />
+    <Content Include="MOTION\icon\icons\Button_Run_Next.png" />
+    <Content Include="MOTION\icon\icons\Button_Save.png" />
+    <Content Include="MOTION\icon\icons\Button_Thumb.png" />
+    <Content Include="MOTION\icon\icons\Button_Unlock.png" />
+    <Content Include="MOTION\icon\icons\Button_Up.png" />
+    <Content Include="MOTION\icon\icons\Button_ZoomFit.png" />
+    <Content Include="MOTION\icon\icons\Button_ZoomLarge.png" />
+    <Content Include="MOTION\icon\icons\Button_ZoomSmall.png" />
+    <Content Include="MOTION\icon\icons\Form_Close.png" />
+    <Content Include="MOTION\icon\icons\Form_Maximum.png" />
+    <Content Include="MOTION\icon\icons\Form_Minimize.png" />
+    <Content Include="MOTION\icon\icons\Form_Pin.png" />
+    <Content Include="MOTION\icon\icons\Form_Pin_Free.png" />
+    <Content Include="MOTION\icon\icons\ICO-Login.ico" />
+    <Content Include="MOTION\icon\icons\ICO-Record.ico" />
+    <Content Include="MOTION\icon\icons\ICO-Tool.ico" />
+    <Content Include="MOTION\icon\icons\IcoEdit.ico" />
+    <Content Include="MOTION\icon\icons\IcoLogin.ico" />
+    <Content Include="MOTION\icon\icons\icons8-add-48.ico" />
+    <Content Include="MOTION\icon\icons\icons8-axis-50.ico" />
+    <Content Include="MOTION\icon\icons\icons8-axis-50.png" />
+    <Content Include="MOTION\icon\icons\icons8-folder-50.bmp" />
+    <Content Include="MOTION\icon\icons\icons8-folder-50.ico" />
+    <Content Include="MOTION\icon\icons\icons8-help-32.png" />
+    <Content Include="MOTION\icon\icons\icons8-user.gif" />
+    <Content Include="MOTION\icon\icons\IcoOutput.ico" />
+    <Content Include="MOTION\icon\icons\IcoResult.ico" />
+    <Content Include="MOTION\icon\icons\IcoResultType.ico" />
+    <Content Include="MOTION\icon\icons\Ico_Software.ico" />
+    <Content Include="MOTION\icon\icons\Ico_Variable.ico" />
+    <Content Include="MOTION\icon\icons\Loadding.gif" />
+    <Content Include="MOTION\icon\icons\MenuLogin.png" />
+    <Content Include="MOTION\icon\icons\Menu_Barcode.png" />
+    <Content Include="MOTION\icon\icons\Menu_Barcode_Ico.ico" />
+    <Content Include="MOTION\icon\icons\Menu_Camera.png" />
+    <Content Include="MOTION\icon\icons\Menu_Camera_Ico.ico" />
+    <Content Include="MOTION\icon\icons\Menu_Controller.png" />
+    <Content Include="MOTION\icon\icons\Menu_Controller_ICO.ico" />
+    <Content Include="MOTION\icon\icons\Menu_Device.png" />
+    <Content Include="MOTION\icon\icons\Menu_Device_2.png" />
+    <Content Include="MOTION\icon\icons\Menu_Display.png" />
+    <Content Include="MOTION\icon\icons\Menu_EditImage.png" />
+    <Content Include="MOTION\icon\icons\Menu_Home.png" />
+    <Content Include="MOTION\icon\icons\Menu_Home1.png" />
+    <Content Include="MOTION\icon\icons\Menu_IO.png" />
+    <Content Include="MOTION\icon\icons\Menu_Light.png" />
+    <Content Include="MOTION\icon\icons\Menu_LightICO.ico" />
+    <Content Include="MOTION\icon\icons\Menu_Monitor.png" />
+    <Content Include="MOTION\icon\icons\Menu_Output.png" />
+    <Content Include="MOTION\icon\icons\Menu_Program.ico" />
+    <Content Include="MOTION\icon\icons\Menu_Program.png" />
+    <Content Include="MOTION\icon\icons\Menu_Result.png" />
+    <Content Include="MOTION\icon\icons\Menu_ResultType.png" />
+    <Content Include="MOTION\icon\icons\Menu_System.png" />
+    <Content Include="MOTION\icon\icons\Menu_Tools.png" />
+    <Content Include="MOTION\icon\icons\Menu_Variable.png" />
+    <Content Include="MOTION\icon\icons\Picture1.png" />
+    <Content Include="MOTION\icon\icons\Picture2.png" />
+    <Content Include="MOTION\icon\icons\State_Green.png" />
+    <Content Include="MOTION\icon\icons\State_Red.png" />
+    <Content Include="MOTION\icon\icons\State_Yellow.png" />
+    <Content Include="MOTION\icon\icons\z6806912398351_798d3bd8fd2367a2f38a28e0f1e84383 %281%29.jpg" />
+    <Content Include="MOTION\icon\IcoOutput.ico" />
+    <Content Include="MOTION\icon\IcoResult.ico" />
+    <Content Include="MOTION\icon\IcoResultType.ico" />
+    <Content Include="MOTION\icon\Ico_Software.ico" />
+    <Content Include="MOTION\icon\Ico_Variable.ico" />
+    <Content Include="MOTION\icon\J9f8h76q9o.gif" />
+    <Content Include="MOTION\icon\Loadding.gif" />
+    <Content Include="MOTION\icon\logo-removebg-preview-1.png" />
+    <Content Include="MOTION\icon\MenuLogin.png" />
+    <Content Include="MOTION\icon\Menu_Barcode.png" />
+    <Content Include="MOTION\icon\Menu_Barcode_Ico.ico" />
+    <Content Include="MOTION\icon\Menu_Camera.png" />
+    <Content Include="MOTION\icon\Menu_Camera_Ico.ico" />
+    <Content Include="MOTION\icon\Menu_Controller.png" />
+    <Content Include="MOTION\icon\Menu_Controller_ICO.ico" />
+    <Content Include="MOTION\icon\Menu_Device.png" />
+    <Content Include="MOTION\icon\Menu_Device_2.png" />
+    <Content Include="MOTION\icon\Menu_Display.png" />
+    <Content Include="MOTION\icon\Menu_EditImage.png" />
+    <Content Include="MOTION\icon\Menu_Home.png" />
+    <Content Include="MOTION\icon\Menu_Home1.png" />
+    <Content Include="MOTION\icon\Menu_IO.png" />
+    <Content Include="MOTION\icon\Menu_Light.png" />
+    <Content Include="MOTION\icon\Menu_LightICO.ico" />
+    <Content Include="MOTION\icon\Menu_Monitor.png" />
+    <Content Include="MOTION\icon\Menu_Output.png" />
+    <Content Include="MOTION\icon\Menu_Program.ico" />
+    <Content Include="MOTION\icon\Menu_Program.png" />
+    <Content Include="MOTION\icon\Menu_Result.png" />
+    <Content Include="MOTION\icon\Menu_ResultType.png" />
+    <Content Include="MOTION\icon\Menu_System.png" />
+    <Content Include="MOTION\icon\Menu_Tools.png" />
+    <Content Include="MOTION\icon\Menu_Variable.png" />
+    <Content Include="MOTION\icon\Picture1.png" />
+    <Content Include="MOTION\icon\Picture2.png" />
+    <Content Include="MOTION\icon\R %281%29.jfif" />
+    <Content Include="MOTION\icon\R-_1_.ico" />
+    <Content Include="MOTION\icon\R.jfif" />
+    <Content Include="MOTION\icon\right-arrow.png" />
+    <Content Include="MOTION\icon\Screenshot 2025-07-16 142145.png" />
+    <Content Include="MOTION\icon\Smaller Network Connection Background.gif" />
+    <Content Include="MOTION\icon\State_Green.png" />
+    <Content Include="MOTION\icon\State_Red.png" />
+    <Content Include="MOTION\icon\State_Yellow.png" />
+    <Content Include="MOTION\icon\z6926212960346_6f4e8ecf6035396e8cd47e39d66d4c9b.jpg" />
+    <Content Include="MOTION\icon\z6926232511691_191bd0209dc306cf42f40ca289ee595f.jpg" />
+    <Content Include="MOTION\icon\z7245958781256_3a41d21ea7045cdf658d27c9f7a7afa8.jpg" />
+    <Content Include="MOTION\icon\ß║ónh1.png" />
+    <Content Include="MOTION\icon\Γö£╞Æ╬ô├▓├ªΓö£Γöénh1.png" />
+    <Content Include="MOTION\icon\├ƒΓòæ├│nh1.png" />
+    <Content Include="MOTION\resources\add-file.png" />
+    <Content Include="MOTION\resources\alarm.png" />
+    <Content Include="MOTION\resources\Auto.png" />
+    <Content Include="MOTION\resources\bin.png" />
+    <Content Include="MOTION\resources\data-modeling.png" />
+    <Content Include="MOTION\resources\house.png" />
+    <Content Include="MOTION\resources\insert.png" />
+    <Content Include="MOTION\resources\Manual.png" />
+    <Content Include="MOTION\resources\next.png" />
+    <Content Include="MOTION\resources\Origin.png" />
+    <Content Include="MOTION\resources\Origin1.png" />
+    <Content Include="MOTION\resources\previous.png" />
+    <Content Include="MOTION\resources\reset.png" />
+    <Content Include="MOTION\resources\settings.png" />
+    <Content Include="MOTION\resources\SEV.gif" />
+    <Content Include="MOTION\resources\touch.ico" />
+    <Content Include="MOTION\resources\touch.png" />
+    <Content Include="MOTION\resources\update.png" />
+    <Content Include="MOTION\resource\icon\add-file.png" />
+    <Content Include="MOTION\resource\icon\alarm.png" />
+    <Content Include="MOTION\resource\icon\arrows.png" />
+    <Content Include="MOTION\resource\icon\bin.png" />
+    <Content Include="MOTION\resource\icon\clean.png" />
+    <Content Include="MOTION\resource\icon\data-modeling.png" />
+    <Content Include="MOTION\resource\icon\eraser.png" />
+    <Content Include="MOTION\resource\icon\insert.png" />
+    <Content Include="MOTION\resource\icon\next.png" />
+    <Content Include="MOTION\resource\icon\plus.png" />
+    <Content Include="MOTION\resource\icon\previous.png" />
+    <Content Include="MOTION\resource\icon\save.png" />
+    <Content Include="MOTION\resource\icon\Screenshot 2026-02-27 092301.png" />
+    <Content Include="MOTION\resource\icon\selective.png" />
+    <Content Include="MOTION\resource\icon\settings.png" />
+    <Content Include="MOTION\resource\icon\touch.ico" />
+    <Content Include="MOTION\resource\icon\touch.png" />
+    <Content Include="MOTION\resource\icon\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MOTION\controldevice\DeviceRouter\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
