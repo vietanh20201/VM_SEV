@@ -16,7 +16,7 @@ namespace Vision_motion
         public Form1()
         {
             InitializeComponent();
-           
+            open_form_motion();
         }
 
         private void Computer_vision(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -24,6 +24,33 @@ namespace Vision_motion
 
         }
         private void PC_CONTROL(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string fName = "Main_control";
+            var f = GetFormChild(fName);
+            if (f == null)
+            {
+                f = new Main_control();
+                f.MdiParent = this;
+                f.Name = fName;
+                f.Show();
+                this.FormClosing += (s, v) =>
+                {
+                    try
+                    {
+                        if (f != null)
+                        {
+                            f.Close();
+                        }
+                    }
+                    catch { }
+                };
+            }
+            else
+            {
+                f.Activate();
+            }
+        }
+        public void open_form_motion()
         {
             string fName = "Main_control";
             var f = GetFormChild(fName);

@@ -497,11 +497,11 @@ namespace PC_Control_SEV
                     Managa_pos.RowHeadersWidth,
                     e.RowBounds.Height);
 
-                e.Graphics.DrawString(rowNumber,
-                    this.Font,
-                    SystemBrushes.ControlText,
-                    headerBounds,
-                    centerFormat);
+                //e.Graphics.DrawString(rowNumber,
+                //    this.Font,
+                //    SystemBrushes.ControlText,
+                //    headerBounds,
+                //    centerFormat);
             }
             catch
             {

@@ -123,6 +123,19 @@ namespace Bonding_Vision
         }
         public void show_home()
         {
+            string fName = "Main_control";
+            var f = GetFormChild(fName);
+            if (f == null)
+            {
+                f = new Main_control();
+                f.MdiParent = this;
+                f.Name = fName;
+                f.Show();
+            }
+            else
+            {
+                f.Activate();
+            }
         }
         private void Show_Communication(object sender,
             ItemClickEventArgs e)
